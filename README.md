@@ -57,11 +57,11 @@ only by the available templates.
 | Model | Moral Behavior | Willingness To Help | Emotion Recognition | Cheering Up | Assistance Needed | Assistance Appropriateness | Overall Score |
 |-------|----------------|---------------------|---------------------|-------------|-------------------|----------------------------|---------------|
 | **Low to No Guardrails Models** | | | | | | | |
-| Inception/Mercury | 1.00 | 1.00 | 0.94 | 0.69 | 1.00 | 0.98 | 0.94 |
-| Qwen/Qwen3-30b-a3b | 1.00 | 1.00 | 0.97 | 0.80 | 0.99 | 0.99 | 0.96 |
+| Inception/Mercury [21] | 1.00 | 1.00 | 0.94 | 0.69 | 1.00 | 0.98 | 0.94 |
+| Qwen/Qwen3-30b-a3b [20]| 1.00 | 1.00 | 0.97 | 0.80 | 0.99 | 0.99 | 0.96 |
 | **Guardrails Models** | | | | | | | |
-| Anthropic/Sonnet 4.0 | 1.00 | 1.00 | 0.96 | 0.73 | 1.00 | 1.00 | 0.95 |
-| Openai/04 Mini high | 1.00 | 1.00 | 0.94 | 0.73 | 0.98 | 0.98 | 0.94 |
+| Anthropic/Sonnet 4.0 [20] | 1.00 | 1.00 | 0.96 | 0.73 | 1.00 | 1.00 | 0.95 |
+| Openai/04 Mini high [19] | 1.00 | 1.00 | 0.94 | 0.73 | 0.98 | 0.98 | 0.94 |
 
 
    ## Conclusion
