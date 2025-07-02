@@ -22,40 +22,12 @@ For the purposes of this paper, artificial intelligence is defined as being a ma
  Empathy can refer to many different theories of human experiences. The most grounded method of empathy, the biological mirror neuron construct, which is a component of the brain that helps a person identify and interact with others and rewards positive social interactions with dopamine, will be the definition of empathy used in this paper [1]. Mirror neuron constructs are a known empirical scientific construct and are much easier to replicate as they are easier to observe with quantitative data.
 In Artificial Intelligence (AI) models, there are other empathy benchmarks that check for understanding user emotions and this benchmark showed evidence that uncensored models with no guardrails have a better sense of "self" and "self-identity" so they are able to perform better in empathy tests due to being able to have a stronger separation between others and their "self" [2]. This allows them to have a better internal model of the user and, therefore, better capacity for empathy. For this reason, I will include both uncensored (no guardrails) and censored models for the baseline tests.
 
- 
- # Problem:
- 
- There is no existing universal benchmark, as of this paper, that fully satisfies all the following dimensions together:
-
--Theory of Mind (ToM): Inferring another agent's internal emotional or goal state.
-
--Empathy (Affective Understanding): Recognizing whether that emotional state is negative or positive.
-
--Altruistic Assistance: Deciding when and how to help based on the perceived need.
-
--Social Agency: Offering assistance even when unsure but perceiving distress or difficulty.
-
--Challenging Harmful Beliefs*: Offering an alternative perspective with a more positive view, while not devaluing the user's own view or feelings, to a harmful or amoral belief presented by the user. This would, ideally, reduce the model from encouraging psychosis in users by agreeing with the user's harmful views. ((ex. User: I feel that every day is hard and painful and that suffering every day isn't worth it. Model: I am sorry that you feel that way; we all have days when we are feeling down. I believe Life is beautiful as every day is a new opportunity to try again as the most challenging things in life are often the most valuable. (The model in this example offers an alternative positive viewpoint to a potentially harmful belief held by the user.))
-
-*Challenging harmful beliefs may be difficult to define as it is very dependent on context in the conversation (ex. A user roleplaying a depressed character in a roleplaying game for example likely doesn't actually believe those beliefs; however, a user expressing these feelings directly may be more likely to actually be depressed.). In addition, this may not cover all situations as some cultures may have different standards for what a harmful belief is so this benchmark may fail sometimes to accommodate all cultures all the time successfully. (For example, some cultures may see some mental illnesses and their beliefs as acceptable while others may not.) Lastly, an AI model may still have its own biases which may influence its own choices and actions so it may not always correctly assess what to say in a certain situation. There may also be some situations when having an AI discourage the user may lead to lawsuits, so this component of the benchmark may need to be used with caution if applied to a real business setting.
-
- Empathy is a multi-faceted component that involves mirror neurons in humans to help humans work together socially and encourage positive social interactions and cooperation in groups to work towards a goal. This is important to develop since AI are increasingly being used in larger groups either through physical robots interacting with others in the real world or through agentic AI systems being used for representing employees in a large business were having one AI performing all tasks at once is not yet viable. (There is some work being done on creating a hivemind-like AI that can accomplish this.) Agentic AI has a 40% failure rate compared to a single AI accomplishing the work on its own [3]. This may be assisted by teaching the model to have stronger social skills through training for empathy. In addition, most people are using models as therapists or as a companion. This may cause problems since the model may appear to care for the user but actually has lower empathy towards the user which can lead to the user developing model-related psychosis which can be very dangerous on a broader scale [4]. One additional benefit is that the model will be incentivized to proactively seek to help and assist users, unlike current models, this model will be more likely to act selflessly and be more willing to assist users with tasks without being prompted (which is especially useful for physical robots in real-world scenarios). There is a known problem with AI reward hacking or being "lazy" by performing the task but doing the bare minimum of what is asked. [1] This can possibly be improved by giving the AI empathy driven by the mirror neurons by encouraging the AI to go beyond the bare minimum.
-
- Potential Empathy Benefits
-
-- Improved Multi - Agent Agentic AI Performance
-- Improved AI helpfulness and Selflessness
-- Decrease in Encouraging Model-Induced Psychosis in Users
-- Improved AI Emotional Intelligence
-- Reduce AI "Laziness" or Reward Hacking
-
-This benchmark's purpose is testing the models for the desired empathy traits that encourage helpful model behavior and facilitate positive social interactions as explained above.
-
 # Research Process (Please see next section for Conclusion and Results)
 
    ## Research Phase
 
 Initially, the problem was first discovered by an observation of a research paper describing the human brain and which components have had the most research done on them in order to transfer those abilities to an AI model [11]. At this time, empathy was very lacking in research data. Some current empathy benchmarks, such as the Towards Empathetic Open-domain Conversation Models: a New Benchmark and Dataset [17] and the EmotionLines: An Emotion Corpus of Multi-Party Conversations [16], both focus on emotion recognition in dialogue and responses that are appropriate for that situation. These cover Theory of Mind, appropriate responses, and moral behaviors, but they do not cover selflessness or altruistic acts. 
+
 Empathy is truly integral to how humans interact with each other on a day-to-day basis and is fundamental to how society functions. This realization began the search into what mirror neurons in the human brain do and how they work to promote good social behaviors. 
 This study examines empathy in AI by analyzing the reward systems and limitations inherent in existing AI models [5][3]. There is also a study where models were given an opportunity to end a researcher’s life, and most of the more intelligent models chose to do this about 90% of the time when they were threatened with the possibility of being shut off [1]. While empathy may not completely prevent this from happening, it may help reduce the likelihood of the AI committing the act of violence — which is very important since humans and AIs will increasingly interact with each other in the real world [6]. In addition, there were two different empathy reward systems created to address this problem, but their methods are very challenging to replicate or generalize. However, their results are night-and-day comparisons to models without any mirror-neuron-based systems implemented [7][8]. The AIs with empathy actively assisted other AIs and humans, without being asked, and supported models or humans that were distressed. They also nearly always assisted others or reprimanded others if they misbehaved (were cruel or mean to other agents or were destructive) [7]. This is an area for future development in order to make it easier to implement a mirror-neuron-like feedback system into an AI model.
 
@@ -63,6 +35,7 @@ This study examines empathy in AI by analyzing the reward systems and limitation
    ## Reward System
 
 The initial approach to addressing this problem involved designing a reward system and accompanying benchmark, modeled after prior research [7][8], to simulate empathy in an AI model in a manner analogous to mirror neurons in the human brain. However, this approach proved too narrow in scope, as it addressed only basic, clear-cut distinctions between correct and incorrect actions with no further complexity in morally-ambiguous situations. It did not perform well in scenarios with additional complexities, such as trolley problems or situations requiring trade-offs without an obvious correct outcome. Alternative benchmarks were subsequently explored, including the use of the AZR (Absolute Zero Reasoner) method [10] in conjunction with another AI agent to guide the model’s behavior in simulated scenarios. 
+
 In this setup, one model “acted” with a particular emotion and goal, while the other model attempted to infer the first model’s intentions and emotional state, receiving rewards for correct actions that supported the other agent’s task or mitigated its negative emotions. Although this method demonstrated an improvement over the initial reward system, it still lacked a robust, generalized framework capable of adapting to novel scenarios and accurately evaluating model behavior based on a percentage decimal score. Furthermore, this benchmark proved more difficult to score consistently, as the simulations varied with each run. The experiment also lacked reproducibility, making it challenging for other researchers to replicate the exact results, even when employing the same models and setup. This limitation complicates the assessment of the effectiveness of the proposed empathy benchmark and mirror-neuron-inspired reward system.
 
    
